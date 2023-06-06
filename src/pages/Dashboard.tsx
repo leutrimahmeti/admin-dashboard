@@ -1,11 +1,40 @@
 import React from "react";
 import { CiMenuKebab } from "react-icons/ci";
 import Chart from "../components/Chart";
+import { CardData } from "../Types/types";
 const firstChart = [
-  { name: "firstChart", data: [120, 10, 143, 40, 60, 120, 20] },
+  {
+    name: "firstChart",
+    data: [120, 10, 143, 40, 60, 120, 20],
+    color: "orange",
+  },
 ];
-const secondChart = [
-  { name: "secondChart", data: [40, 90, 73, 93, 74, 120, 180] },
+
+const cardData: CardData[] = [
+  {
+    label: "Due Tasks",
+    value: 79,
+    color: "blue-500",
+    description: "Due Tasks",
+    subLabel: "Completed:",
+    subValue: 13,
+  },
+  {
+    label: "Tasks",
+    value: 17,
+    color: "red-500",
+    description: "Tasks",
+    subLabel: "From yesterday:",
+    subValue: 9,
+  },
+  {
+    label: "Open",
+    value: 24,
+    color: "amber-500",
+    description: "Open",
+    subLabel: "Closed today:",
+    subValue: 19,
+  },
 ];
 const Dashboard = () => {
   return (
@@ -13,62 +42,37 @@ const Dashboard = () => {
       <div className="text-3xl font-bold">Dashboard</div>
 
       <div className="flex flex-row gap-4">
-        <div className="flex bg-white flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
-          <div className="justify-between flex">
-            <span>Lorem.</span>
-            <CiMenuKebab />
-          </div>
-          <div className="flex flex-col mt-2 items-center">
-            <div className="text-7xl font-bold tracking-tight leading-none text-blue-500">
-              79
+        {cardData.map((data, index) => (
+          <div
+            key={index}
+            className="flex bg-white flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden"
+          >
+            <div className="justify-between flex">
+              <span>{data.label}</span>
+              <CiMenuKebab />
             </div>
-            <div className="text-lg font-medium text-blue-600 dark:text-blue-500">
-              Due Tasks
-            </div>
-            <div className="flex items-baseline justify-center w-full mt-5 text-secondary">
-              <div className="text-md font-medium truncate">Completed:</div>
-              <div className="ml-1.5 text-lg font-semibold">13</div>
-            </div>
-          </div>
-        </div>
-        <div className="flex bg-white flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
-          <div className="justify-between flex">
-            <span>Lorem.</span>
-            <CiMenuKebab />
-          </div>
-          <div className="flex flex-col mt-2 items-center">
-            <div className="text-7xl font-bold tracking-tight leading-none text-red-500">
-              17
-            </div>
-            <div className="text-lg font-medium text-red-600 dark:text-red-500">
-              Tasks
-            </div>
-            <div className="flex items-baseline justify-center w-full mt-5 text-secondary">
-              <div className="text-md font-medium truncate">
-                From yesterday:
+            <div className="flex flex-col mt-2 items-center">
+              <div
+                className={`text-7xl font-bold tracking-tight leading-none text-${data.color}`}
+              >
+                {data.value}
               </div>
-              <div className="ml-1.5 text-lg font-semibold">9</div>
+              <div
+                className={`text-lg font-medium text-${data.color} dark:text-${data.color}`}
+              >
+                {data.description}
+              </div>
+              <div className="flex items-baseline justify-center w-full mt-5 text-secondary">
+                <div className="text-md font-medium truncate">
+                  {data.subLabel}
+                </div>
+                <div className="ml-1.5 text-lg font-semibold">
+                  {data.subValue}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="flex bg-white flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
-          <div className="justify-between flex">
-            <span>Lorem.</span>
-            <CiMenuKebab />
-          </div>
-          <div className="flex flex-col mt-2 items-center">
-            <div className="text-7xl font-bold tracking-tight leading-none text-amber-500">
-              24
-            </div>
-            <div className="text-lg font-medium text-amber-600 dark:text-amber-500">
-              Open
-            </div>
-            <div className="flex items-baseline justify-center w-full mt-5 text-secondary">
-              <div className="text-md font-medium truncate">Closed today:</div>
-              <div className="ml-1.5 text-lg font-semibold">19</div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="flex-grow bg-white rounded-xl p-8">

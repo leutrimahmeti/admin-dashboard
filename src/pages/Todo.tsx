@@ -5,7 +5,7 @@ import {
   Droppable,
   DropResult,
 } from "react-beautiful-dnd";
-import mockData from "../data";
+import { boardMockData } from "../data";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AddTaskModal } from "../components/AddTaskModal";
 import { Card } from "../components/Card";
@@ -21,7 +21,7 @@ interface Section {
 }
 
 export function Todo() {
-  const [data, setData] = useState<Section[]>(mockData);
+  const [data, setData] = useState<Section[]>(boardMockData);
   const [showModal, setShowModal] = useState(false);
   const [selectedSection, setSelectedSection] = useState<Section | null>(null);
 
