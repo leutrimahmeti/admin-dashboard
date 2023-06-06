@@ -47,11 +47,11 @@ const Dashboard = () => {
           let textColorClass = "";
 
           if (data.color === "blue") {
-            textColorClass = "text-blue";
+            textColorClass = "text-blue-500";
           } else if (data.color === "red") {
-            textColorClass = "text-red";
+            textColorClass = "text-red-500";
           } else if (data.color === "amber") {
-            textColorClass = "text-amber";
+            textColorClass = "text-amber-500";
           }
 
           return (
