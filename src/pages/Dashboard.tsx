@@ -45,17 +45,13 @@ const Dashboard = () => {
       <div className="flex flex-row gap-4">
         {cardData.map((data, index) => {
           let textColorClass = "";
-          let bgColorClass = "";
 
           if (data.color === "blue") {
             textColorClass = "text-blue";
-            bgColorClass = "bg-blue";
           } else if (data.color === "red") {
             textColorClass = "text-red";
-            bgColorClass = "bg-red";
           } else if (data.color === "amber") {
             textColorClass = "text-amber";
-            bgColorClass = "bg-amber";
           }
 
           return (
