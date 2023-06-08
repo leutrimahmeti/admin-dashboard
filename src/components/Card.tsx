@@ -6,7 +6,7 @@ interface CardProps {
   onDelete?: () => void;
 }
 
-export function Card({ style, children, onDelete }: CardProps): JSX.Element {
+export function Card({ style, children, onDelete }: CardProps) {
   return (
     <div
       style={style}

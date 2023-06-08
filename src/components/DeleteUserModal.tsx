@@ -7,11 +7,11 @@ interface DeleteUserModalProps {
   handleCancelDelete: () => void;
 }
 
-const DeleteUserModal: React.FC<DeleteUserModalProps> = ({
+const DeleteUserModal = ({
   showModal,
   handleConfirmDelete,
   handleCancelDelete,
-}) => {
+}: DeleteUserModalProps) => {
   if (!showModal) {
     return null;
   }

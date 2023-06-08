@@ -5,7 +5,7 @@ interface SearchInputProps {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => {
+const SearchInput = ({ value, onChange }: SearchInputProps) => {
   return (
     <input
       type="text"

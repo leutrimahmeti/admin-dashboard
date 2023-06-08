@@ -5,7 +5,7 @@ import UserRow from "../components/UserRow";
 import Pagination from "../components/Pagination";
 import SearchInput from "../components/SarchInput";
 
-const Users: React.FC = () => {
+const Users = () => {
   const [data, setData] = useState(usersMockData);
   const [currentPage, setCurrentPage] = useState(1);
   const [showModal, setShowModal] = useState(false);

@@ -60,7 +60,7 @@ interface ChartProps {
   height: number;
 }
 
-const Chart: React.FC<ChartProps> = ({ data, height }) => {
+const Chart = ({ data, height }: ChartProps) => {
   return (
     <ReactApexChart
       options={options}

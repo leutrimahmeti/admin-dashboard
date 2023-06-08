@@ -2,11 +2,11 @@ import { AiFillDelete } from "react-icons/ai";
 import { BsPersonFill } from "react-icons/bs";
 import { UserRowProps } from "../Types/types";
 
-const UserRow: React.FC<UserRowProps> = ({
+const UserRow = ({
   user,
   handleToggleStatus,
   handleDeleteClick,
-}) => (
+}: UserRowProps) => (
   <tr
     key={user.id}
     className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid grid-cols-3 items-center cursor-pointer"

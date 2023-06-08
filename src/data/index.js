@@ -50,47 +50,47 @@ export const boardMockData = [
 ];
 export const usersMockData = [
   {
-    id: 1,
+    id: uuidv4(),
     name: "Liam Clark",
     status: "Deactivated",
   },
   {
-    id: 2,
+    id: uuidv4(),
     name: "Ava Martinez",
     status: "Activated",
   },
   {
-    id: 3,
+    id: uuidv4(),
     name: "Noah Johnson",
     status: "Activated",
   },
   {
-    id: 4,
+    id: uuidv4(),
     name: "Emma Thompson",
     status: "Deactivated",
   },
   {
-    id: 5,
+    id: uuidv4(),
     name: "Sophia Walker",
     status: "Activated",
   },
   {
-    id: 6,
+    id: uuidv4(),
     name: "Michael Allen",
     status: "Activated",
   },
   {
-    id: 7,
+    id: uuidv4(),
     name: "Isabella Davis",
     status: "Deactivated",
   },
   {
-    id: 8,
+    id: uuidv4(),
     name: "James Wilson",
     status: "Activated",
   },
   {
-    id: 9,
+    id: uuidv4(),
     name: "Olivia Moore",
     status: "Activated",
   },

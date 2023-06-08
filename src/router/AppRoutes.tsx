@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import Users from "../pages/Users";
 import { Todo } from "../pages/Todo";
 
-const AppRoutes: React.FC = () => {
+const AppRoutes = () => {
   return (
     <Layout>
       <Routes>

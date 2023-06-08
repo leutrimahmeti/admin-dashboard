@@ -28,7 +28,6 @@ export function Todo() {
   const onDragEnd = (result: DropResult) => {
     if (!result.destination) return;
     const { source, destination } = result;
-
     if (source.droppableId !== destination.droppableId) {
       const sourceColIndex = data.findIndex((e) => e.id === source.droppableId);
       const destinationColIndex = data.findIndex(
@@ -42,6 +41,7 @@ export function Todo() {
       const destinationTask = [...destinationCol.tasks];
 
       const [removed] = sourceTask.splice(source.index, 1);
+      console.log(destination.index);
       destinationTask.splice(destination.index, 0, removed);
 
       data[sourceColIndex].tasks = sourceTask;

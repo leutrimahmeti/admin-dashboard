@@ -7,11 +7,11 @@ interface AddTaskModalProps {
   onCreateTask: (title: string) => void;
 }
 
-export const AddTaskModal: React.FC<AddTaskModalProps> = ({
+export const AddTaskModal = ({
   showModal,
   onCloseModal,
   onCreateTask,
-}) => {
+}: AddTaskModalProps) => {
   const [newTaskTitle, setNewTaskTitle] = useState("");
 
   const handleNewTaskTitleChange = (
